@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import hero from '../../public/indoor_image_1.jpeg';
+import second_house from '../../public/second_house.jpeg';
+import third_house from '../../public/third_house.jpeg';
+import fourth_house from '../../public/fourth_house.jpeg';
+import fifth_house from '../../public/fifth_house.jpeg';
 
 export default function Home() {
 	return (
@@ -22,28 +26,99 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='cont h-full mt-32'>
-				<h1 className='featured flex flex-row justify-center items-center my-[1.25rem] mx-0 text-4xl md:text-6xl font-extrabold text-yellow-500'>
+			<div className='cont h-full mt-32 flex flex-col justify-center gap-5'>
+				<h1 className='featured flex flex-row justify-center items-center my-8 mx-0 text-4xl md:text-6xl font-extrabold text-yellow-500'>
 					Featured Properties
 				</h1>
-				<ul>
-					<li>Property 1</li>
-					<li>Property 2</li>
-					<li>Property 3</li>
-					<li>Property 4</li>
-					<li>Property 5</li>
-				</ul>
-				<p className='props_view flex flex-row justify-center items-center'>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center'>
+					<div className='max-w-sm rounded overflow-hidden shadow-lg'>
+						<Image
+							src={hero}
+							alt='hero image'
+							className='object-cover overflow-hidden'
+						/>
+						<div className='px-6 py-4'>
+							<div className='font-bold text-xl mb-2'>
+								Musa Yaradua GRA, Abuja
+							</div>
+							<p className='text-gray-700 text-base'>
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Voluptatibus quia, nulla!
+								Maiores et perferendis eaque, exercitationem
+								praesentium nihil.
+							</p>
+						</div>
+						<div className='px-6 pt-4 pb-2'></div>
+					</div>
+					<div className='max-w-sm rounded overflow-hidden shadow-lg'>
+						<Image
+							src={second_house}
+							alt='second house image'
+							className='object-cover overflow-hidden w-full'
+						/>
+						<div className='px-6 py-4'>
+							<div className='font-bold text-xl mb-2'>
+								Ministers Hill GRA, Enugu
+							</div>
+							<p className='text-gray-700 text-base'>
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Voluptatibus quia, nulla!
+								Maiores et perferendis eaque, exercitationem
+								praesentium nihil.
+							</p>
+						</div>
+						<div className='px-6 pt-4 pb-2'></div>
+					</div>
+					<div className='max-w-sm rounded overflow-hidden shadow-lg'>
+						<Image
+							src={third_house}
+							alt='second house image'
+							className='object-cover overflow-hidden w-full'
+						/>
+						<div className='px-6 py-4'>
+							<div className='font-bold text-xl mb-2'>
+								Obaegbona Estates, Calabar
+							</div>
+							<p className='text-gray-700 text-base'>
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Voluptatibus quia, nulla!
+								Maiores et perferendis eaque, exercitationem
+								praesentium nihil.
+							</p>
+						</div>
+						<div className='px-6 pt-4 pb-2'></div>
+					</div>
+					<div className='max-w-sm rounded overflow-hidden shadow-lg'>
+						<Image
+							src={fourth_house}
+							alt='second house image'
+							className='object-cover overflow-hidden w-full'
+						/>
+						<div className='px-6 py-4'>
+							<div className='font-bold text-xl mb-2'>
+								Palace Way, Abeokuta
+							</div>
+							<p className='text-gray-700 text-base'>
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Voluptatibus quia, nulla!
+								Maiores et perferendis eaque, exercitationem
+								praesentium nihil.
+							</p>
+						</div>
+						<div className='px-6 pt-4 pb-2'></div>
+					</div>
+				</div>
+				<p className='props_view flex flex-row justify-center items-center mt-8 text-yellow-500 text-2xl md:text-4xl'>
 					View all properties
 				</p>
 			</div>
 			<div className='cont h-full mt-32 bg-slate-100'>
 				<div className='flex flex-col-reverse justify-center items-center gap-5 md:flex-row md:justify-start'>
-					<div className='item w-80 py-5 md:w-64 flex-1 md:py-10'>
+					<div className='item w-80 py-5 md:w-full flex-1 md:py-10 md:pl-5'>
 						<Image
-							src={hero}
+							src={fifth_house}
 							alt='hero image'
-							className='object-cover overflow-hidden'
+							className='object-cover overflow-hidden w-full'
 						/>
 					</div>
 					<div className='pt-10 flex-1 md:pt-0'>
