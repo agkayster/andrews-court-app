@@ -1,6 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const links = [
 	{
@@ -36,13 +38,34 @@ const links = [
 ];
 
 const Navbar = () => {
+	const [isDropdown, setIsDropDown] = useState(false);
+
+	const handleMobileBurger = () => setIsDropDown(!isDropdown);
+
 	return (
-		<div className='relative'>
-			<div className='h-28 flex justify-between items-center px-10 fixed w-screen bg-white opacity-75 md:px-20'>
-				<Link href='/' className='font-bold text-1xl md:text-2xl'>
-					Andrews Court
-				</Link>
-				<div className='links flex flex-col items-center gap-10 md:flex-row'>
+		<>
+			<div
+				className={`${
+					isDropdown
+						? 'h-[23rem] flex flex-col justify-start px-10 pt-20 transition-all ease-in-out duration-1000'
+						: 'flex flex-col h-28 px-10 pt-10'
+				} fixed w-screen bg-white 
+      md:px-20 md:h-28 md:flex-row md:justify-between md:items-center md:pt-0 md:transition-none`}>
+				<div className='flex flex-row justify-between items-center'>
+					<Link href='/' className='font-bold text-1xl md:text-2xl'>
+						Andrews Court
+					</Link>
+					<div className='md:hidden'>
+						<GiHamburgerMenu onClick={handleMobileBurger} />
+					</div>
+				</div>
+				<div
+					className={`links flex flex-col items-start gap-5 pt-4 ${
+						isDropdown
+							? 'absolute top-24 transition-all ease-in-out duration-1000'
+							: 'absolute -top-72'
+					}
+        md:flex-row md:gap-10 md:items-center md:pt-0 md:border-none md:relative md:top-0 md:transition-none`}>
 					{links.map(({ id, title, url }) => (
 						<Link key={id} href={url}>
 							{title}
@@ -50,7 +73,7 @@ const Navbar = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
