@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 
@@ -36,14 +37,18 @@ const links = [
 
 const Navbar = () => {
 	return (
-		<div>
-			<Link href='/'>Andrews Court</Link>
-			<div>
-				{links.map(({ id, title, url }) => (
-					<Link key={id} href={url}>
-						{title}
-					</Link>
-				))}
+		<div className='relative'>
+			<div className='h-28 flex justify-between items-center px-10 fixed w-screen bg-white opacity-75 md:px-20'>
+				<Link href='/' className='font-bold text-1xl md:text-2xl'>
+					Andrews Court
+				</Link>
+				<div className='links flex flex-col items-center gap-10 md:flex-row'>
+					{links.map(({ id, title, url }) => (
+						<Link key={id} href={url}>
+							{title}
+						</Link>
+					))}
+				</div>
 			</div>
 		</div>
 	);
