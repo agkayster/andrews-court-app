@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { HiAdjustmentsHorizontal } from 'react-icons/hi2';
+import { HiAdjustmentsVertical } from 'react-icons/hi2';
 
 const links = [
 	{
@@ -55,9 +56,19 @@ const Navbar = () => {
 					<Link href='/' className='font-bold text-1xl md:text-2xl'>
 						Andrews Court
 					</Link>
-					<div className='md:hidden'>
-						<GiHamburgerMenu onClick={handleMobileBurger} />
-					</div>
+					{isDropdown ? (
+						<div className='md:hidden'>
+							<HiAdjustmentsHorizontal
+								onClick={handleMobileBurger}
+							/>
+						</div>
+					) : (
+						<div className='md:hidden'>
+							<HiAdjustmentsVertical
+								onClick={handleMobileBurger}
+							/>
+						</div>
+					)}
 				</div>
 				<div
 					className={`links flex flex-col items-start gap-5 pt-4 ${
