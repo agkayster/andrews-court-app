@@ -17,11 +17,11 @@ export default function Home() {
 						className='object-cover overflow-hidden'
 					/>
 				</div>
-				<div class='w-full h-full flex flex-col gap-16 justify-center items-center absolute backdrop-brightness-50 -z-10'>
-					<div class='text-white text-6xl w-full text-center'>
+				<div className='w-full h-full flex flex-col gap-16 justify-center items-center absolute backdrop-brightness-50 -z-10'>
+					<div className='text-white text-6xl w-full text-center'>
 						Welcome to
 					</div>
-					<div class='text-8xl w-full text-center text-yellow-500'>
+					<div className='text-8xl w-full text-center text-yellow-500'>
 						Andrews Court
 					</div>
 				</div>
