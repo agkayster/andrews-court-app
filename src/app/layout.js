@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={proza.className}>
-				<div className='container'>
+				<div className='container flex flex-col justify-between py-0 min-h-screen'>
 					<Navbar />
 					{children}
 					<Footer />
