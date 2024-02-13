@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { HiAdjustmentsHorizontal } from 'react-icons/hi2';
 import { HiAdjustmentsVertical } from 'react-icons/hi2';
@@ -40,8 +41,11 @@ const links = [
 
 const Navbar = () => {
 	const [isDropdown, setIsDropDown] = useState(false);
+	const pathname = usePathname();
 
 	const handleMobileBurger = () => setIsDropDown(!isDropdown);
+
+	console.log('get path name => ', pathname);
 
 	return (
 		<>
@@ -78,7 +82,10 @@ const Navbar = () => {
 					}
         md:flex-row md:gap-10 md:items-center md:pt-0 md:border-none md:relative md:top-0 md:transition-none`}>
 					{links.map(({ id, title, url }) => (
-						<Link key={id} href={url}>
+						<Link
+							key={id}
+							href={url}
+							className='transition duration-1000 ease-in-out md:bg-white md:hover:bg-gradient-to-r from-white to-yellow-300 md:hover:underline md:hover:text-blue-500'>
 							{title}
 						</Link>
 					))}

@@ -4,7 +4,7 @@ import { images } from './images';
 
 const Footer = () => {
 	return (
-		<div className='h-14 flex flex-col items-center justify-between md:flex-row p-10'>
+		<div className='h-14 flex flex-col items-center justify-between md:flex-row pb-10 px-10 md:p-10'>
 			<div className='text-sm mb-4 md:mb-0'>
 				©️andrewscourt. All rights reserved 2024.
 			</div>
