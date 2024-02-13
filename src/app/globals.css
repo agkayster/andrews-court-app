@@ -26,3 +26,13 @@ body {
 		text-wrap: balance;
 	}
 }
+
+/* .container {
+	max-width: 85.4rem;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0 3.75rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+} */
